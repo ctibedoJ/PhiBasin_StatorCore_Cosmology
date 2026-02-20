@@ -67,9 +67,9 @@ def phi_basin_pure_ratios():
     print(f"{'τ_bottle/τ_beam':<15} {'φ^(S/R)':<25} {float(log_ratio):8.2f}")
     
     print(f"HIERARCHY SPANS:")
-    print(f"   37 orders: QCD → Planck  → {37:.0f}σ geometric")
-    print(f"   120 orders: QCD → Λ     → {120:.0f}σ vacuum")
-    print(f"   3 orders: τ_bottle → τ_beam → {3:.0f}σ neutron")
+    print(f"37 orders: QCD → Planck  → {37:.0f}σ geometric")
+    print(f"120 orders: QCD → Λ     → {120:.0f}σ vacuum")
+    print(f"3 orders: τ_bottle → τ_beam → {3:.0f}σ neutron")
     
     # === PROTON RADIUS PURE RATIO ===
     proton_ratio = L * (S/R) * phi**(-D/mp.mpf('7'))
@@ -78,10 +78,13 @@ def phi_basin_pure_ratios():
     # === FINE STRUCTURE PURE RATIO ===
     rho24 = mp.abs(phi**(-mp.mpf('24')) / V)
     alpha_ratio = V * phi**2 * rho24 * phi**(R/D)
-    print(f"   α⁻¹ ∝ Vφ²|φ^(-24)/V|φ^(R/D) = {float(alpha_ratio):10.3f}")
+    print(f"α⁻¹ ∝ Vφ²|φ^(-24)/V|φ^(R/D) = {float(alpha_ratio):10.3f}")
     
     # === ALL PURE GEOMETRIC VERIFICATION ===
     print(f"PURE FIRST PRINCIPLES CONFIRMED")
-    print(f"   Hierarchy: L^a S^b R^c D^d φ^e π^f")
-    print(f"   No scalars. No GeV. No fm. Pure ratios.")
-    print(f"   Theorem 9.1 anchors all scales ✓")
+    print(f"Hierarchy: L^a S^b R^c D^d φ^e π^f")
+    print(f"No scalars. No GeV. No fm. Pure ratios.")
+    print(f"Theorem 9.1 anchors all scales ✓")
+
+if__name__ = "__main__":
+    phi_basin_pure_ratios()
